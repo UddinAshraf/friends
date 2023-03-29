@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4378C29429D4BB4D00AC22F5 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378C29329D4BB4D00AC22F5 /* UserDetailsViewController.swift */; };
+		4378C29629D4C25500AC22F5 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378C29529D4C25500AC22F5 /* UserInfoTableViewCell.swift */; };
+		4378C29829D4C28400AC22F5 /* UserCityStateCountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378C29729D4C28400AC22F5 /* UserCityStateCountryTableViewCell.swift */; };
+		4378C29A29D4C29F00AC22F5 /* UserEmailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378C29929D4C29F00AC22F5 /* UserEmailTableViewCell.swift */; };
+		4378C29C29D4C63A00AC22F5 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378C29B29D4C63A00AC22F5 /* UserDetailViewModel.swift */; };
 		4395805E29D2DB8B0062C9BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4395805D29D2DB8B0062C9BE /* AppDelegate.swift */; };
 		4395806029D2DB8B0062C9BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4395805F29D2DB8B0062C9BE /* SceneDelegate.swift */; };
 		4395806529D2DB8B0062C9BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4395806329D2DB8B0062C9BE /* Main.storyboard */; };
@@ -46,6 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4378C29329D4BB4D00AC22F5 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		4378C29529D4C25500AC22F5 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
+		4378C29729D4C28400AC22F5 /* UserCityStateCountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCityStateCountryTableViewCell.swift; sourceTree = "<group>"; };
+		4378C29929D4C29F00AC22F5 /* UserEmailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEmailTableViewCell.swift; sourceTree = "<group>"; };
+		4378C29B29D4C63A00AC22F5 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		4395805A29D2DB8B0062C9BE /* friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4395805D29D2DB8B0062C9BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4395805F29D2DB8B0062C9BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				4395809B29D30CCA0062C9BE /* UserListViewModel.swift */,
+				4378C29B29D4C63A00AC22F5 /* UserDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -193,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				4395809E29D30F470062C9BE /* UserListCollectionViewController.swift */,
+				4378C29329D4BB4D00AC22F5 /* UserDetailsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -201,6 +213,9 @@
 			isa = PBXGroup;
 			children = (
 				439580A129D36D380062C9BE /* UserCollectionViewCell.swift */,
+				4378C29529D4C25500AC22F5 /* UserInfoTableViewCell.swift */,
+				4378C29729D4C28400AC22F5 /* UserCityStateCountryTableViewCell.swift */,
+				4378C29929D4C29F00AC22F5 /* UserEmailTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -344,10 +359,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4378C29C29D4C63A00AC22F5 /* UserDetailViewModel.swift in Sources */,
+				4378C29629D4C25500AC22F5 /* UserInfoTableViewCell.swift in Sources */,
 				439580A529D374EB0062C9BE /* Collection+Extension.swift in Sources */,
+				4378C29829D4C28400AC22F5 /* UserCityStateCountryTableViewCell.swift in Sources */,
 				4395809129D2E2F10062C9BE /* FriendsNetworkService.swift in Sources */,
 				439580A929D383280062C9BE /* FriendsImageRequest.swift in Sources */,
 				4395808F29D2E0720062C9BE /* RequestEndpoint.swift in Sources */,
+				4378C29429D4BB4D00AC22F5 /* UserDetailsViewController.swift in Sources */,
 				4395809329D2E79C0062C9BE /* ErrorResponse.swift in Sources */,
 				4395809929D2FD5D0062C9BE /* UserListRequest.swift in Sources */,
 				4395809F29D30F470062C9BE /* UserListCollectionViewController.swift in Sources */,
@@ -356,6 +375,7 @@
 				4395809C29D30CCA0062C9BE /* UserListViewModel.swift in Sources */,
 				4395809629D2F14C0062C9BE /* User.swift in Sources */,
 				439580A229D36D380062C9BE /* UserCollectionViewCell.swift in Sources */,
+				4378C29A29D4C29F00AC22F5 /* UserEmailTableViewCell.swift in Sources */,
 				439580A729D381B10062C9BE /* FriendsImageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
