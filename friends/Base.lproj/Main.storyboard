@@ -273,7 +273,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="test@gmail.com" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnK-RF-X76">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="test@gmail.com" translatesAutoresizingMaskIntoConstraints="NO" id="CnK-RF-X76">
                                                     <rect key="frame" x="180" y="0.0" width="980" height="89"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -291,6 +291,9 @@
                                                 <constraint firstItem="ONw-5W-PoS" firstAttribute="centerY" secondItem="MbH-Lo-oU8" secondAttribute="centerY" id="ubQ-lh-ZA4"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emailTextView" destination="CnK-RF-X76" id="5ts-I3-Iek"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

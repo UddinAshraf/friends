@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import MessageUI
+
 class UserDetailsViewController: UIViewController {
     
     @IBOutlet weak var userImageView: UIImageView!
@@ -50,6 +52,8 @@ extension UserDetailsViewController: UITableViewDataSource {
             
         case .email:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: UserEmailTableViewCell.identifier, for: indexPath) as?  UserEmailTableViewCell else { return UITableViewCell() }
+            cell.delegate = self
+            cell.configure(with: viewModel?.user.email ?? "")
             return cell
             
         default:
@@ -72,11 +76,38 @@ extension UserDetailsViewController: UITableViewDataSource {
             return cell
         
         }
-       
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50.0
     }
-
 }
+
+//MARK: UserEmailTableViewCellDelegate method
+extension UserDetailsViewController: UserEmailTableViewCellDelegate {
+    func didClikedEmail(email: String) {
+        if MFMailComposeViewController.canSendMail() {
+            let mailVC = MFMailComposeViewController()
+            let recipients = [email]
+            mailVC.mailComposeDelegate = self
+            mailVC.setToRecipients(recipients)
+            mailVC.setMessageBody("<p>Hi Frinds!</p>", isHTML: true)
+            
+            present(mailVC, animated: true)
+        } else {
+            let alert = UIAlertController(title: "Error!!", message: "Something wrong happend please try again later!!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                alert.dismiss(animated: true)
+            }))
+            self.present(alert, animated: true)
+        }
+    }
+}
+
+//MARK: UserEmailTableViewCellDelegate method
+extension UserDetailsViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+}
+   
